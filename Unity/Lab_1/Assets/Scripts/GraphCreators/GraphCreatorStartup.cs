@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.IO;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -10,7 +9,7 @@ namespace Assets.Scripts
 
         public static void GoToTheGraphCreator(string algorithmName)
         {
-            string applicationPath = "../../GraphCreator/bin/Debug/net6.0/GraphCreator.exe";
+            string applicationPath = "..\\..\\GraphCreator\\bin\\Debug\\net6.0\\GraphCreator.exe";
             string arguments = algorithmName;
 
             ProcessStartInfo startInfo = new()

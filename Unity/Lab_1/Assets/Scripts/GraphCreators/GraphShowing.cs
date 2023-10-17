@@ -17,7 +17,7 @@ namespace Assets.Scripts
         Texture2D LoadTextureFromFile()
         {
             byte[] fileData = File.
-                ReadAllBytes($"../../Graphs_Png/graph_{VarsHolder.AlgorithmName}.png");
+                ReadAllBytes($"..\\..\\Graphs_Png\\graph_{VarsHolder.AlgorithmName}.png");
 
             Texture2D texture = new(2, 2);
             texture.LoadImage(fileData);

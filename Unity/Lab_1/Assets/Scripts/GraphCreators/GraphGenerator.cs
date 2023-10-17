@@ -10,7 +10,7 @@ namespace Assets.Scripts
     {
         public GameObject EmptyObject;
         public Image[] Points = new Image[5];
-        private string imagePath = $"../../Graphs_Png/graph_{VarsHolder.AlgorithmName}.png";
+        private string imagePath = $"..\\..\\Graphs_Png\\graph_{VarsHolder.AlgorithmName}.png";
         private readonly float speed = 0.8f;
         private int cycleStep;
         private int currentCycle = 0;
