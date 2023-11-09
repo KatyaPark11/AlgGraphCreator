@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.Reflection;
 
@@ -21,7 +22,7 @@ namespace GraphCreator
         static void Main(string[] args)
         {
             //получение информации об алгоритме через рефлексию
-            Algorithm = Algorithm.GetAlgorithms().FirstOrDefault(alg => alg.AlgName == args[0]);
+            Algorithm = Algorithm.GetAlgorithms().FirstOrDefault(alg => alg.AlgName == "Comb_Sort");
             string algClassName = string.Format("{0}.{1}", Algorithm.AlgNamespace, Algorithm.AlgClass);
             string algMethodName = Algorithm.AlgMethod;
             Type algCassType = Type.GetType(algClassName);
@@ -99,7 +100,8 @@ namespace GraphCreator
             Graphics.DrawTheGraph();
 
             //отрисовка аппроксимации через рефлексию
-            MethodInfo graphicsExtMethod = typeof(ApproxExtensionsForGraphics).GetMethod(string.Format("Draw{0}Approximation", Algorithm.AlgComplexity));
+            MethodInfo graphicsExtMethod = typeof(ApproxExtensionsForGraphics).
+                GetMethod(string.Format("Draw{0}Approximation", Algorithm.AlgComplexity));
             graphicsExtMethod.Invoke(null, new object[] { Graphics });
 
             //сохранение графика

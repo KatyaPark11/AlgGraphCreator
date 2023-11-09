@@ -158,5 +158,42 @@ namespace GraphCreator
                 Graphics.DrawLine(ApproxLinePen, prevX, prevY, x, y);
             }
         }
+
+        /// <summary>
+        /// Метод для отрисовки на графике аппроксимации линейно-логарифмической функцией.
+        /// </summary>
+        /// <param name="Graphics">График для отрисовки на нём аппроксимации.</param>
+        public static void DrawLineLogApproximation(this Graphics Graphics)
+        {
+            // Создаем матрицу A и вектор b для МНК для логарифмической функции
+            Matrix<double> A = DenseMatrix.OfColumns(new[] { CoorsX.Select(x => x * Math.Log(x)), DenseVector.Create(CoorsX.Count, 1.0) });
+            Vector<double> B = DenseVector.OfEnumerable(FuncCoorsY);
+
+            // Решаем систему уравнений Ax = b
+            Vector<double> coefficients = A.Solve(B);
+
+            // Получаем коэффициенты a и b для логарифмической функции y = a * x * ln(x) + b
+            double a = coefficients[0];
+            double b = coefficients[1];
+
+            double func(double num) => a * num * Math.Log(num) + b;
+
+            for (int i = 0; i < CoorsX.Count; i++)
+            {
+                if (i == 0) continue;
+                //положение точки с использованием масштабирования
+                long x = (long)CoorsX[i];
+                long y = (long)func(CoorsX[i]);
+
+                //положение предыдущих точек
+                long prevX = (long)CoorsX[i - 1];
+                long prevY = (long)func(CoorsX[i - 1]);
+
+                //отрисовка точки
+                Graphics.DrawEllipse(PointPen, x - 2, y - 2, 3, 3);
+                //отрисовка линии
+                Graphics.DrawLine(ApproxLinePen, prevX, prevY, x, y);
+            }
+        }
     }
 }

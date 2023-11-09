@@ -47,7 +47,7 @@ namespace GraphCreator
                 matrix2.GenerateAMatrix(i);
                 Matrix[] matrices = new[] { matrix1, matrix2 };
                 object[] methodParams = matrices;
-                int repeatsCount = 1;
+                int repeatsCount = 5;
                 CoorsYGetting.GetYCoor(methodParams, repeatsCount);
             }
         }
