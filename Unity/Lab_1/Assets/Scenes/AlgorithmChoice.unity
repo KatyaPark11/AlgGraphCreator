@@ -1119,9 +1119,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1392470893}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &908241318
 GameObject:
@@ -1719,8 +1720,8 @@ RectTransform:
   - {fileID: 1495172377}
   - {fileID: 993742933}
   - {fileID: 294618814}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 861338516}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

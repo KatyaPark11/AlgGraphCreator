@@ -22,7 +22,7 @@ namespace GraphCreator
         static void Main(string[] args)
         {
             //получение информации об алгоритме через рефлексию
-            Algorithm = Algorithm.GetAlgorithms().FirstOrDefault(alg => alg.AlgName == "Comb_Sort");
+            Algorithm = Algorithm.GetAlgorithms().FirstOrDefault(alg => alg.AlgName == args[0]);
             string algClassName = string.Format("{0}.{1}", Algorithm.AlgNamespace, Algorithm.AlgClass);
             string algMethodName = Algorithm.AlgMethod;
             Type algCassType = Type.GetType(algClassName);
@@ -105,7 +105,7 @@ namespace GraphCreator
             graphicsExtMethod.Invoke(null, new object[] { Graphics });
 
             //сохранение графика
-            string outputFile = $"C:\\Users\\User\\Desktop\\Моё\\Программы\\Graphs_Png\\graph_{Algorithm.AlgName}.png";
+            string outputFile = $"..\\Graphs_Png\\graph_{Algorithm.AlgName}.png";
             bitmap.Save(outputFile, ImageFormat.Png);
         }
     }
