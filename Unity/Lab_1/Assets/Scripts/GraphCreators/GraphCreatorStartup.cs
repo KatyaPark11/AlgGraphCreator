@@ -3,19 +3,19 @@ using System.Diagnostics;
 namespace Assets.Scripts.GraphCreators
 {
     /// <summary>
-    /// Класс для запуска консольного приложения для создания графика.
+    /// РљР»Р°СЃСЃ РґР»СЏ Р·Р°РїСѓСЃРєР° РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РіСЂР°С„РёРєР°.
     /// </summary>
     public class GraphCreatorStartup
     {
         /// <summary>
-        /// Процесс работы консольного приложения для создания графика.
+        /// РџСЂРѕС†РµСЃСЃ СЂР°Р±РѕС‚С‹ РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РіСЂР°С„РёРєР°.
         /// </summary>
         public static Process Process;
 
         /// <summary>
-        /// Метод для перехода к консольному приложению для создания графика.
+        /// РњРµС‚РѕРґ РґР»СЏ РїРµСЂРµС…РѕРґР° Рє РєРѕРЅСЃРѕР»СЊРЅРѕРјСѓ РїСЂРёР»РѕР¶РµРЅРёСЋ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РіСЂР°С„РёРєР°.
         /// </summary>
-        /// <param name="algorithmName">Название алгоритма.</param>
+        /// <param name="algorithmName">РќР°Р·РІР°РЅРёРµ Р°Р»РіРѕСЂРёС‚РјР°.</param>
         public static void GoToTheGraphCreator(string algorithmName)
         {
             string applicationPath = "..\\..\\GraphCreator\\bin\\Debug\\net6.0\\GraphCreator.exe";
