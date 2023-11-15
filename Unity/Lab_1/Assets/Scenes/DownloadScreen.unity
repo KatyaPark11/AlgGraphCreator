@@ -210,9 +210,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 130519893}
-        m_TargetAssemblyTypeName: Assets.Scripts.MainSceneJump, Assembly-CSharp
-        m_MethodName: GoToMainScene
-        m_Mode: 1
+        m_TargetAssemblyTypeName: Assets.Scripts.SceneManager, Assembly-CSharp
+        m_MethodName: ChangeTheScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -292,65 +292,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 130519886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44294d43f76a69f4385296387732fcf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 45d4b964ff60e47408beb3f54a463e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &135661261
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 135661263}
-  - component: {fileID: 135661262}
-  m_Layer: 5
-  m_Name: EmptyObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &135661262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135661261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cf14af21c5c34e8050146c03c06b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EmptyObject: {fileID: 135661261}
-  Points:
-  - {fileID: 764194435}
-  - {fileID: 1448358212}
-  - {fileID: 1960126753}
-  - {fileID: 1404008129}
-  - {fileID: 1842531905}
---- !u!224 &135661263
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135661261}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55573505, y: 0.55573505, z: 0.55573505}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1174.1206, y: 547.02325}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &210577054
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +361,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561616212
 GameObject:
@@ -946,7 +890,7 @@ GameObject:
   - component: {fileID: 1152026995}
   - component: {fileID: 1152026994}
   - component: {fileID: 1152026993}
-  - component: {fileID: 1152026992}
+  - component: {fileID: 1152026997}
   - component: {fileID: 1152026996}
   m_Layer: 5
   m_Name: Exit
@@ -976,18 +920,6 @@ RectTransform:
   m_AnchoredPosition: {x: 768.5884, y: -297.70193}
   m_SizeDelta: {x: 174.9467, y: 51.9492}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1152026992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152026990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e45490588d183df439af430beba3d951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1152026993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,9 +964,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1152026992}
-        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
+      - m_Target: {fileID: 1152026997}
+        m_TargetAssemblyTypeName: Assets.Scripts.SceneManager, Assembly-CSharp
         m_MethodName: QuitTheApp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1152026996}
+        m_TargetAssemblyTypeName: Assets.Scripts.ProcessClosing, Assembly-CSharp
+        m_MethodName: CloseTheProcess
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1094,6 +1038,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54f1f656c242f84897735d7e0b2d514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1152026997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152026990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d4b964ff60e47408beb3f54a463e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1343902822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1343902823}
+  - component: {fileID: 1343902824}
   m_Layer: 5
   m_Name: Points
   m_TagString: Untagged
@@ -1135,6 +1092,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1343902824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343902822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3cf14af21c5c34e8050146c03c06b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points:
+  - {fileID: 764194435}
+  - {fileID: 1448358212}
+  - {fileID: 1960126753}
+  - {fileID: 1404008129}
+  - {fileID: 1842531905}
 --- !u!1 &1404008127
 GameObject:
   m_ObjectHideFlags: 0

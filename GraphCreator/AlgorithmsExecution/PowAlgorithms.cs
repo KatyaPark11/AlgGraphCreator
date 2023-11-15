@@ -1,7 +1,6 @@
-﻿using System.Reflection;
-using static GraphCreator.Program;
+﻿using static GraphCreator.Program;
 
-namespace GraphCreator
+namespace GraphCreator.AlgorithmsExecution
 {
     /// <summary>
     /// Класс для подсчёта числа операций степенных алгоритмов и прогона самих алгоритмов.

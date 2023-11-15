@@ -1,6 +1,7 @@
-﻿using static GraphCreator.Program;
+﻿using GraphCreator.AlgorithmsResearch;
+using static GraphCreator.Program;
 
-namespace GraphCreator
+namespace GraphCreator.AlgorithmsExecution
 {
     /// <summary>
     /// Класс для работы с матрицей.

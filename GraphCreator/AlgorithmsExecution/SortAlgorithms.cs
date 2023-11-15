@@ -1,4 +1,6 @@
-﻿namespace GraphCreator
+﻿using GraphCreator.AlgorithmsResearch;
+
+namespace GraphCreator.AlgorithmsExecution
 {
     /// <summary>
     /// Класс для выполнения алгоритмов сортировки.

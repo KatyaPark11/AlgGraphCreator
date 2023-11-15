@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using GraphCreator.AlgorithmsExecution;
+using GraphCreator.ExtensionsForGraphics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Reflection;
@@ -88,6 +89,7 @@ namespace GraphCreator
             Graphics.DrawAxis();
             Graphics.DrawTheHeader();
             Graphics.DrawTheNet();
+
             //отрисовка ОY и ОX
             Graphics.DrawLine(AxisPen, PlotX, PlotY, PlotX, PlotY + PlotHeight);
             Graphics.DrawLine(AxisPen, PlotX, PlotY + PlotHeight, PlotX + PlotWidth, PlotY + PlotHeight);
@@ -105,7 +107,7 @@ namespace GraphCreator
             graphicsExtMethod.Invoke(null, new object[] { Graphics });
 
             //сохранение графика
-            string outputFile = $"..\\Graphs_Png\\graph_{Algorithm.AlgName}.png";
+            string outputFile = $"..\\..\\Graphs_Png\\graph_{Algorithm.AlgName}.png";
             bitmap.Save(outputFile, ImageFormat.Png);
         }
     }

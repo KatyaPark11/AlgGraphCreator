@@ -1,4 +1,6 @@
-﻿namespace GraphCreator
+﻿using GraphCreator.AlgorithmsResearch;
+
+namespace GraphCreator.AlgorithmsExecution
 {
     /// <summary>
     /// Класс для выполнения простых алгоритмов.
@@ -10,7 +12,7 @@
         /// </summary>
         public static void GetYCoors()
         {
-            for (int i = 14; i < Program.MaxPoint; i++)
+            for (int i = 0; i < Program.MaxPoint; i++)
             {
                 int[] numsVector = RandomMaker.GenerateRandomArray(Program.StepX * i);
                 object[] methodParams = new object[] { numsVector };

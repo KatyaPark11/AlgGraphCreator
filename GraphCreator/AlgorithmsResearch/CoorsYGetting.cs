@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using static GraphCreator.Program;
 
-namespace GraphCreator
+namespace GraphCreator.AlgorithmsResearch
 {
     /// <summary>
     /// Класс для получения координаты на OY с помощью замера времени.
